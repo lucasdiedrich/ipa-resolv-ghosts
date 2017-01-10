@@ -157,7 +157,7 @@ def f_see_all(ruvs):
     '''
     print "\n All RUVs:"
     for ruv in ruvs:
-        ruv_type = " Normal"  if ("replicageneration" and "ldap://" in ruv) else " *Ghost"
+        ruv_type = " Normal"  if ("replicageneration" or "ldap://" in ruv) else " *Ghost"
         print ruv_type, " - ", ruv
     raw_input("[Enter to continue]")
 
